@@ -1,0 +1,6 @@
+<!-- getting started on firebase -->
+
+            var bigOne = document.getElementById("id_of_element");
+            var dbRef = firebase.database().ref().child('text');
+            dbRef.on('value', snap=> bigOne.innerHTML = snap.val());
+			
