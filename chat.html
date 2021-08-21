@@ -57,7 +57,7 @@ setInterval(function(){
   .FixedHeightContainer
 {
   float:left;
-  height: 120px;
+  height: 308px;
   width:100%; 
   padding:2px; 
   margin-bottom:10px;  
@@ -65,7 +65,7 @@ setInterval(function(){
 }
 .Content
 {
-  height:117px;
+  height:296px;
    overflow:auto;
    background-color:white;
    color:black;
@@ -122,18 +122,55 @@ setInterval(function(){
 }
 
 .right{
-margin-left:72px;
-
-
-.btn
-{
-
-background-color:black;
-color:white;
-
+margin-left:167px;
 }
 
 
+
+.sbtn{
+  position: relative;
+  background-color: #04AA6D;
+  border-radius: 12px;
+  font-size: 20px;
+  color: #FFFFFF;
+  padding: 2px;
+  width: 136px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  float:right
+  
+}
+
+.sbtn:after {
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.sbtn:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.clr
+{
+
+margin-left:40%;
+}
+#message{margin-top:-14px; margin-bottom:5px;}
 
 
   </style>
@@ -161,27 +198,29 @@ color:white;
         <ul style="padding:10px; line-height:160%; " >
             <li id="chat" > Chat</li>
 			
-		
+
         </ul>
 		
-		</div>
-		</div>
 		
+		</div>
+		</div>
+					<div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar clr">
+  <div class="mdl-snackbar__text"></div>
+  <button class="mdl-snackbar__action btnn snkbtn" type="button"></button>
+</div>
         
         <input type="text"  id="message" placeholder="write here"></input> 
        
 	   
 	   
-	<div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar clr">
-  <div class="mdl-snackbar__text"></div>
-  <button class="mdl-snackbar__action btnn" type="button"></button>
-</div>
 
 
-        <button id="myBtn"class="btn waves-effect waves-light blue" type="submit" name="action" onclick="sendMessage(); formrest();  convert(); ">Submit
-  </button>  <span id="status"></span>  	
+
+<button type="button" onclick="deleteAll()" class="deltt">DEL</button>
+<span id="status"></span>  	
 		
- <button type="button" onclick="deleteAll()" class="deltt">DEL</button>
+        <button id="myBtn" class="sbtn" type="submit"  onclick="sendMessage(); formrest();  convert(); ">Submit
+  </button>  
  
 
  
@@ -228,6 +267,10 @@ input.addEventListener("keyup", function(event) {
          };
       </script>
  
+ 
+ 
+ 
+       
  
  
  
