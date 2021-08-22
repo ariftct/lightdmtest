@@ -72,7 +72,7 @@ setTimeout(function() {
 
 //Actions for the .set() promise successfull or failed
 function successfull(){
-  snackbar('Message Sent')
+  snackbar('Sent OK')
 }
 
 function failed(){
