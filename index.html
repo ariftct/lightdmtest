@@ -6,14 +6,17 @@
     <title> Demo Site !</title>
     <style>
     .parallax-container {
-      height: 250px;
+      height: 290px;
     }
 	body
 	{
-	width:300px;
+	width:290px;
 	 
   margin:0 auto;
 	}
+	input[type=email] { width: 290px}
+	input[type=password] { width: 290px}
+	.sbtn {width:120px;padding:10px; margin-left:79px;;}
     </style>
 </head>
 
@@ -22,13 +25,15 @@
     <!-- Modal Structure LogIn -->
     <div id="modal1" class="">
         <div class="modal-content">
-            <h4>Login</h4>
+            <h3 align="center">Login</h3>
             <div class="row">
                 <form class="col s12">
                     <div class="row">
                         <div class="input-field col s12">
 						<label for="email">Email</label> <br>
                             <input id="email_log" type="email" class="validate">
+							<br>
+							<br>
                             
                         </div>
                         <div class="row">
@@ -43,7 +48,7 @@
             </div>
 			
 			<br>
-            <button   onclick="LogIN()">LogIn</button>
+            <button class="sbtn"   onclick="LogIN()">LogIn</button>
         </div>
     </div>
 
