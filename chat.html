@@ -16,14 +16,15 @@ setInterval(function(){
 </script>
 		
 		
+  		
   <script type="text/javascript">
     function convert()
     {
 	  var text=document.getElementById("urlconvert").value;
 	  var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
 	  var text1=text.replace(exp, '<a target="blank" href="$1">$1</a>');
-	  var exp2 =/(^|[^\/])(www\.[\S]+(\b|$))/gim;
-	  var rplc=text1.replace(exp2, '$1<a target="blank" href="http://$2">click here</a>');
+	  var exp2 =/(^|[^\/])(yy\.[\S]+(\b|$))/g;
+	  var rplc=text1.replace(exp2, '<span style="color:yellow">   </span>');
       document.getElementById("message").value = rplc;
       
     }
